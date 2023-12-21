@@ -1,0 +1,51 @@
+TODo-
+Home Base, game starts here, from here you can open the game to multiplayer
+Battle start, start in zoomed out view then zoom in to initial card draw.
+
+Bugs
+-Leader upgrade event forced other players out when host clicked it. (Might have been related to the bug of being able to multiple select event rewards, to monitor)
+-Guady armour doesn't work
+-Can change event location target when moving to it.
+-Probably change destination it to a vote system?
+-Change look and position of the info text on discard and recruit.
+
+-Eager Deathhound not syncing it's effect.
+-state desync, from hunt and fight.
+-Card moves weirdly in hand if you try to play it when you can't
+	-Also when freshly drawn and then moved over.
+-State desync seems to be tied to playing treasure cards.
+
+
+*Remote still had the other players figurine on the final explore node from round 1.
+-Elven enchanter not working
+-Eager recruit not wiping if it is the last play of a round.
+
+-(Maybe have another event for item upgrades?
+
+*Sync board states, need to sync
+	-Recruitment Deck
+	-Enemy Deck
+	-Each Players deck
+	-Each Players health
+	-Each players relic
+	-Each players leader
+
+-Rejig the monster positions when one dies.
+-Shaman somehow kept 2 attack power on the other client.
+
+--Meta Stuff--
+Island which the players set off from has a big hall in the middle and the docks for each player on the right.
+
+Players have 3 resources, Treasure, People and Weapons they can spend on upgrades. Players can buy personal upgrades in their dock or they cn contribute to community upgrades at the longhall.
+
+Dock
+Player can buy a hold for their ship or start with a different starting deck.
+
+LongHall (Communal)
+Players can buy global buffs and global unlocks (more ship health, bigger card hands etc.)
+
+Treasure Room (Communal)
+Players can unlock relic based upgrades.
+
+Barracks (Communal)
+Players can unlock new cards to join the recruitment list

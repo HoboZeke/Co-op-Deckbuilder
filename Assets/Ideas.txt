@@ -1,0 +1,31 @@
+Treasure:
+You collect treasure cards which don't do anything but fill up your deck, however they count towards your meta-progress goals.
+
+Cards:
+		Small Attractive Token:
+			-Recruit (Does nothing but as it recruits it only cost 1 card draw)
+		Small Inspirational Token:
+			-Draw (Does nothing but as it draws you can spend a recruit token to replace it)
+		Large Treasure:
+			(Literally does nothing but worth more.)
+		Greedy Dwarf:
+			Takes all currently played item and equips them to itself.
+		Quick Study:
+			Starts with 0 atk, when it kills something permenantly get +1 atk.
+		Stubborn Elder:
+			has 5 Strength, it's strength value can never be altered.
+		Loud Boaster:
+			Always is face up, even when in your deck.
+		Lone Wolf:
+			At then end of your turn, if this is the only Person you have played return them to your hand.
+		Clumsy Jotun:
+			Gains double the Str bonus from items, but destroys the item when it attacks.
+		AshSteel Blade:
+			Cannot be Destroyed.
+
+Artifacts:
+		Loyal Commander:
+			-Increase all starting cards value by 1 and significantly improve their loot values if they are in your deck at the end of the voyage. (x2 to normal loot)
+		Fancy Equipment:
+			-Gain 1 recruit for every 2 items played in a round.
+
