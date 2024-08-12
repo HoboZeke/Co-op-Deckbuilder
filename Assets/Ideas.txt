@@ -1,0 +1,35 @@
+Treasure:
+You collect treasure cards which don't do anything but fill up your deck, however they count towards your meta-progress goals.
+
+Cards:
+		Quick Study:
+			Starts with 0 atk, when it kills something permenantly get +1 atk.
+		Stubborn Elder:
+			has 5 Strength, it's strength value can never be altered.
+		Loud Boaster:
+			Always is face up, even when in your deck.
+		Lone Wolf:
+			At then end of your turn, if this is the only Person you have played return them to your hand.
+		Clumsy Jotun:
+			Gains double the Str bonus from items, but destroys the item when it attacks.
+		AshSteel Blade:
+			Cannot be Destroyed.
+
+Artifacts:
+		Loyal Commander:
+			-Increase all starting cards value by 1 and significantly improve their loot values if they are in your deck at the end of the voyage. (x2 to normal loot)
+		Fancy Equipment:
+			-Gain 1 recruit for every 2 items played in a round.
+		Masterwork Plans:
+			-All cards in play gain +1 attack when you have no cards in hand.
+		Caltrops:
+			-Any monsters taunted into your zone take 1 damage.
+		Poisoned Club:
+			-Stunned monsters will hit a random monster in their zone instead.
+		Mirror Ship:
+			-When picked up duplicated a copy of every warrior in your deck
+		Mirror Vault:
+			-When picked up duplicates a copy of every item in your deck
+		The Mighty Pen:
+			-When a warrior with 0 Strength attacks it hits for 3 damage
+
