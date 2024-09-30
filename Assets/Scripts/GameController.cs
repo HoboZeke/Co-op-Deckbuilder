@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController main;
     public UIController ui;
+    public Lobby lobby;
     public CutsceneController cutsceneController;
     bool playedCutscene;
     bool bossRound;
@@ -35,6 +36,9 @@ public class GameController : MonoBehaviour
 
     public bool waitTurnForSync;
 
+    [Header("Player Count Balances")]
+    public int[] baseRecruitsForPlayerCount;
+
     private void Awake()
     {
         main = this;
@@ -43,6 +47,18 @@ public class GameController : MonoBehaviour
     public void MoveFromLobbyToGame()
     {
         cutsceneController.FadeOutOfLobby();
+    }
+
+    public void StartSinglePlayerGame()
+    {
+        lobby.SinglePlayerSetup();
+        lobby.gameObject.SetActive(true);
+        CameraController.main.MoveCameraToLobby();
+    }
+
+    public int GetBaseRecruitsForPlayerCount()
+    {
+        return baseRecruitsForPlayerCount[MutliplayerController.active.playerCount-1];
     }
 
     public void LoadIntroCutscene(int profileId)

@@ -10,7 +10,7 @@ public class Zones : MonoBehaviour
 
     public Player player;
 
-    public enum Type { Deck, Hand, Play, Discard, Moving, Recruitment, RecruitmentDeck, Monster, Location, Leader, Ability, Equipped };
+    public enum Type { Loose, Deck, Hand, Play, Discard, Moving, Recruitment, RecruitmentDeck, Monster, Location, Leader, Ability, Equipped };
 
     public Deck deck;
     public Hand hand;

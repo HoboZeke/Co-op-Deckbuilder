@@ -202,9 +202,9 @@ public class Card
                     }
                 }
             }
+            Debug.Log("WRONG TARGET Target card not picked up by if statements. Probably Wrong Tags, target tag: " + script.myCard.tag);
         }
 
-        Debug.Log("WRONG TARGET Target card not picked up by if statements. Probably Wrong Tags");
         return false;
     }
 

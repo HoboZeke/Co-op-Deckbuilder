@@ -10,6 +10,7 @@ public class GreedyForItems : CardEffect
     {
         items.Clear();
         items = version.zoneScript.equip.AllEquippedCards();
+        Debug.Log(gameObject.name + " found " + items.Count + " items currently equipped");
 
         foreach (CardObject item in items)
         {

@@ -144,6 +144,8 @@ public class LocationEventManager : MonoBehaviour
 
     public void ChestPressed()
     {
+        if (isFinished) return;
+
         for (int i = 0; i < possibleTreasureCardsPositions.Length; i++)
         {
             GameObject card = CardArchive.main.SpawnRandomLooseTreasure();
@@ -159,6 +161,8 @@ public class LocationEventManager : MonoBehaviour
 
     void TreasureCardClicked(CardObject obj)
     {
+        if (isFinished) return;
+
         if (MutliplayerController.active.IsMultiplayerGame())
         {
             Client.active.TellServerIHaveGainedACard(obj.referenceIndex);
@@ -205,6 +209,8 @@ public class LocationEventManager : MonoBehaviour
 
     public void FirePressed()
     {
+        if (isFinished) return;
+
         for (int i = 0; i < possibleRecruitCardsPositions.Length; i++)
         {
             GameObject card = CardArchive.main.SpawnRandomLooseCard();
@@ -220,6 +226,8 @@ public class LocationEventManager : MonoBehaviour
 
     void RecruitCardClicked(CardObject obj)
     {
+        if (isFinished) return;
+
         if (MutliplayerController.active.IsMultiplayerGame())
         {
             Client.active.TellServerIHaveGainedACard(obj.referenceIndex);
@@ -285,6 +293,8 @@ public class LocationEventManager : MonoBehaviour
 
     public void TombPressed()
     {
+        if (isFinished) return;
+
         Debug.Log("Tomb Pressed");
         if (!relicsShown && !isFinished)
         {
@@ -299,6 +309,8 @@ public class LocationEventManager : MonoBehaviour
 
     void ChoseRelic1()
     {
+        if (isFinished) return;
+
         relicsToChooseFrom[0].ApplyRelic(Player.active);
         if (MutliplayerController.active.IsMultiplayerGame()) { Client.active.TellServerIHaveGainedARelic(relicsToChooseFrom[0].index); }
         relicEventEndText.text = "You have claimed the " + relicsToChooseFrom[0].name + " relic."; 
@@ -307,6 +319,8 @@ public class LocationEventManager : MonoBehaviour
 
     void ChoseRelic2()
     {
+        if (isFinished) return;
+
         relicsToChooseFrom[1].ApplyRelic(Player.active);
         if (MutliplayerController.active.IsMultiplayerGame()) { Client.active.TellServerIHaveGainedARelic(relicsToChooseFrom[1].index); }
         relicEventEndText.text = "You have claimed the " + relicsToChooseFrom[1].name + " relic.";
@@ -315,6 +329,8 @@ public class LocationEventManager : MonoBehaviour
 
     void ChoseRelic3()
     {
+        if (isFinished) return;
+
         relicsToChooseFrom[2].ApplyRelic(Player.active);
         if (MutliplayerController.active.IsMultiplayerGame()) { Client.active.TellServerIHaveGainedARelic(relicsToChooseFrom[2].index); }
         relicEventEndText.text = "You have claimed the " + relicsToChooseFrom[2].name + " relic.";
@@ -407,7 +423,9 @@ public class LocationEventManager : MonoBehaviour
 
     public void SettleZonePressed()
     {
-        foreach(CardObject card in Zones.main.deck.cardsInDeck) { cardToLoseCardObjects.Add(card); }
+        if (isFinished) return;
+
+        foreach (CardObject card in Zones.main.deck.cardsInDeck) { cardToLoseCardObjects.Add(card); }
         Zones.main.deck.cardsInDeck.Clear();
 
         for(int i = 0; i < cardToLoseCardObjects.Count; i++)
@@ -425,6 +443,8 @@ public class LocationEventManager : MonoBehaviour
 
     void LoseACardClicked(CardObject obj)
     {
+        if (isFinished) return;
+
         if (choiceMade) { return; }
         choiceMade = true;
         StartCoroutine(MoveCardToLeaveLocation(obj.transform));
@@ -546,6 +566,8 @@ public class LocationEventManager : MonoBehaviour
 
     public void TrackZonePressed()
     {
+        if (isFinished) return;
+
         if (huntTriggered) { return; }
         foreach (CardObject card in Zones.main.deck.cardsInDeck)
         {
@@ -572,6 +594,8 @@ public class LocationEventManager : MonoBehaviour
 
     void HuntCardClicked(CardObject obj)
     {
+        if (isFinished) return;
+
         if (huntChoiceMade) { return; }
         huntChoiceMade = true;
         huntEventEndText.text = obj.CardName();
@@ -656,6 +680,8 @@ public class LocationEventManager : MonoBehaviour
 
     public void RepairPressed()
     {
+        if (isFinished) return;
+
         Player.active.GainHealth(repairStrength);
         if (MutliplayerController.active.IsMultiplayerGame()) { Client.active.TellServerIHaveGainedHealth(repairStrength); }
         repairEventEndText.text = "Your men used the materials to repair upto " + repairStrength + " points of damage to your ship.";
@@ -1036,6 +1062,8 @@ public class LocationEventManager : MonoBehaviour
 
     public void LeftFighterZonePressed()
     {
+        if (isFinished) return;
+
         if (sacrificeChoiceMode == 0 && leftFighter == null)
         {
             foreach (CardObject card in Zones.main.deck.cardsInDeck)
@@ -1065,6 +1093,8 @@ public class LocationEventManager : MonoBehaviour
 
     public void RightFighterZonePressed()
     {
+        if (isFinished) return;
+
         if (sacrificeChoiceMode == 0 && rightFighter == null)
         {
             foreach (CardObject card in Zones.main.deck.cardsInDeck)
@@ -1094,6 +1124,8 @@ public class LocationEventManager : MonoBehaviour
 
     void SacrificeCardClicked(CardObject obj)
     {
+        if (isFinished) return;
+
         switch (sacrificeChoiceMode)
         {
             default:
@@ -1381,7 +1413,9 @@ public class LocationEventManager : MonoBehaviour
 
     public void TradeButtonPressed()
     {
-        if(tradeStage == 1)
+        if (isFinished) return;
+
+        if (tradeStage == 1)
         {
             SetTradeStatus(true);
             //Zones.main.deck.InstantlyShuffleMultipleCardsIntoDeck(cardToTradeCardObjects);
@@ -1517,7 +1551,9 @@ public class LocationEventManager : MonoBehaviour
 
     void ChooseTradePartner(int choice)
     {
-        if(chosenTradePartner == choice) { return; }
+        if (isFinished) return;
+
+        if (chosenTradePartner == choice) { return; }
 
         if (cardToRecieve != null) { Destroy(cardToRecieve.gameObject); }
         cardToRecieve = null;

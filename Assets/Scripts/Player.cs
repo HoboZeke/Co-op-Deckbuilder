@@ -199,6 +199,7 @@ public class Player : MonoBehaviour
         Client.active.TellServerIHaveBuiltMyDeckList(startingDeck);
 
         zones.deck.DrawCards(cardsDrawnAtStartOfTurn);
+        recruits = GameController.main.GetBaseRecruitsForPlayerCount();
         NewTurn();
 
     }

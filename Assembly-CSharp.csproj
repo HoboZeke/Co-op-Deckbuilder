@@ -135,6 +135,7 @@
     <Compile Include="Assets\Scripts\LocationEventManager.cs" />
     <Compile Include="Assets\Scripts\PlayZones\EquippedZone.cs" />
     <Compile Include="Assets\Scripts\LeaderSelection.cs" />
+    <Compile Include="Assets\Scripts\Cards\BounceToHandIfAlone.cs" />
     <Compile Include="Assets\Scripts\Card.cs" />
     <Compile Include="Assets\Scripts\Cards\ImpactOnAttach.cs" />
     <Compile Include="Assets\Scripts\Relic\EffectTrinket.cs" />

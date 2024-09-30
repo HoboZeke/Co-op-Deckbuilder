@@ -22,7 +22,8 @@ public class RecruitHolder : MonoBehaviour
 
         if (currentRecruits > transform.childCount)
         {
-            GainRecruits(currentRecruits - transform.childCount);
+            if (!spent) { GainRecruits(currentRecruits - transform.childCount); }
+            else { GainRecruits(currentRecruits); }
         }
         else if (currentRecruits == transform.childCount && spent)
         {

@@ -69,6 +69,34 @@ public class Lobby : MonoBehaviour
 
         if (PlayerPrefs.HasKey("PlayersLastUsedName")) { SubmitName(PlayerPrefs.GetString("PlayersLastUsedName"), playerId); }
     }
+    public void SinglePlayerSetup()
+    {
+        playerId = 0;
+        playerCount = 1;
+        UpdateNumberOfPlayerPanels(1);
+        UpdateStartButton();
+
+        foreach (GameObject obj in menuButtonsToHide) { obj.SetActive(false); }
+
+        clanOptions.SetActive(true);
+        leaderOptions.SetActive(true);
+        leaderOptions.GetComponent<LeaderSelection>().Setup();
+
+        localPlayerCube.layer = 9;
+        localPlayerSailImage.gameObject.layer = 9;
+        localPlayerSailImage.transform.parent.gameObject.layer = 9;
+        player1Cube.layer = 9;
+        player1SailImage.gameObject.layer = 9;
+        player1SailImage.transform.parent.gameObject.layer = 9;
+        player2Cube.layer = 9;
+        player2SailImage.gameObject.layer = 9;
+        player2SailImage.transform.parent.gameObject.layer = 9;
+        player3Cube.layer = 9;
+        player3SailImage.gameObject.layer = 9;
+        player3SailImage.transform.parent.gameObject.layer = 9;
+
+    }
+
 
     public void NewPlayerJoined(int numberOfPlayers)
     {

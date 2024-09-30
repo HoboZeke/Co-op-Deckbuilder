@@ -615,6 +615,8 @@ public class CardObject : MonoBehaviour
     {
         switch (zone)
         {
+            case Zones.Type.Loose:
+                return true;
             case Zones.Type.Hand: 
                 return true;
             case Zones.Type.Location:

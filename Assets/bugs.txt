@@ -3,6 +3,8 @@ Home Base, game starts here, from here you can open the game to multiplayer
 Battle start, start in zoomed out view then zoom in to initial card draw.
 
 Bugs
+*Recruit UI not updating with extra recruits at the start of round.
+-Monsters not moving correctly and monster in zone missing reference (Possibly due to either taunting and killing at the same time, or when the location is completely destroyed monsters not moving over properly)
 -Desync happening with monster generators, might just be a timing issue for getting the board state.
 -Desync caused by the card sacrific event.
 -Cards doubling up in play area when too many are played at once.

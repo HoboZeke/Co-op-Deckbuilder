@@ -32,6 +32,11 @@ public class PlayArea : MonoBehaviour
         }
     }
 
+    public CardObject[] CardsInPLay()
+    {
+        return cardsInPlay.ToArray();
+    }
+
     public void EndTurn()
     {
         foreach(CardObject card in cardsInPlay)
