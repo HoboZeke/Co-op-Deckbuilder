@@ -15,6 +15,8 @@ public class EffectsManager : MonoBehaviour
     public List<VisualEffect> effectsQueue = new List<VisualEffect>();
     public enum EffectType { DamageToCard, DamageToPlayer, ShieldPlayer }
 
+    [SerializeField] Vector3 cardBobMod;
+
     bool progressQueueAtEndOfFrame;
 
     private void Awake()
@@ -124,12 +126,17 @@ public class EffectsManager : MonoBehaviour
         }
     }
 
+
     IEnumerator AnimatedSlashEffect(VisualEffect effect, float speedMultiplier)
     {
         float timeElapsed = 0f;
 
         Vector3 start = effect.cardSource.transform.position;
         Vector3 end = effect.cardTarget.transform.position;
+
+        Vector3 cardBasePos = effect.cardSource.transform.localPosition;
+        Vector3 cardModPos = cardBasePos + cardBobMod;
+        float bobDuration = animationDuration / 4f;
 
         GameObject slashObj = Instantiate(attackEffectPrefab);
         slashObj.transform.SetParent(transform);
@@ -141,6 +148,26 @@ public class EffectsManager : MonoBehaviour
 
         while(timeElapsed < animationDuration)
         {
+            //Card Bob Animation
+            if(timeElapsed < bobDuration)
+            {
+                if (timeElapsed < bobDuration / 2f)
+                {
+                    effect.cardSource.transform.localPosition = Vector3.Lerp(cardBasePos, cardModPos, timeElapsed / (bobDuration/2f));
+                }
+                else
+                {
+                    float bobT = (timeElapsed - (bobDuration / 2f)) / (bobDuration / 2f);
+                    effect.cardSource.transform.localPosition = Vector3.Lerp(cardModPos, cardBasePos, bobT);
+                }
+            }
+            else
+            {
+                effect.cardSource.transform.localPosition = cardBasePos;
+            }
+
+
+            //Slash Animation
             float z = 0;
             float halfWayMarker = animationDuration / 2;
             if(timeElapsed <= halfWayMarker) { z = Mathf.Lerp(0f, zCurvePeak, timeElapsed / (animationDuration / 2)); }

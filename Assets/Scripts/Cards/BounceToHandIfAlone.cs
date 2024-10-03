@@ -26,6 +26,16 @@ public class BounceToHandIfAlone : CardEffect
         {
             version.zoneScript.play.cardsInPlay.Remove(version);
             version.zoneScript.hand.MoveCardToHand(version);
+
+            if (version.attachedCards.Count > 0)
+            {
+                //Make a temp list so that they can be removed from the main list during the foreach loop
+                List<CardObject> attachCards = new List<CardObject>(version.attachedCards);
+                foreach (CardObject attachment in attachCards)
+                {
+                    attachment.AttachedCardHasLeftPlay(version);
+                }
+            }
         }
     }
 }

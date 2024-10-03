@@ -11973,7 +11973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectTag: 0
   targetTriggerType: 0
-  abilityString: Repair 1
+  abilityString: Repair 1 when equipped with an item.
   keywords: 05000000
   strength: 1
 --- !u!1001 &212047818
@@ -30676,6 +30676,7 @@ MonoBehaviour:
   attackEffectPrefab: {fileID: 4233037050298714158, guid: 843e654ecc98da64fbb5d62f09ae5add, type: 3}
   zCurvePeak: -1
   isAnimating: 0
+  cardBobMod: {x: 0, y: 0.1, z: 0}
 --- !u!4 &525254302
 Transform:
   m_ObjectHideFlags: 0

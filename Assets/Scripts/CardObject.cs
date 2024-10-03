@@ -12,48 +12,48 @@ public class CardObject : MonoBehaviour
     public int referenceIndex;
     public Zones zoneScript;
 
-    public Image banner;
-    public Image background;
-    public Image frame;
+    [SerializeField] Image banner;
+    [SerializeField] Image background;
+    [SerializeField] Image frame;
     public Image cardArt;
     public Image attackOverlay;
-    public Image healthOverlay;
-    public Image shieldOverlay;
-    public Image stunOverlay;
+    [SerializeField] Image healthOverlay;
+    [SerializeField] Image shieldOverlay;
+    [SerializeField] Image stunOverlay;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI cardText;
     public TextMeshProUGUI attackText;
-    public TextMeshProUGUI healthText;
-    public TextMeshProUGUI shieldText;
+    [SerializeField] TextMeshProUGUI healthText;
+    [SerializeField] TextMeshProUGUI shieldText;
 
     [SerializeField] GameObject topCornerTab, topCornerTabEmpty, bottomCornerTab, bottomCornerTabEmpty;
 
-    public Image cardBackOverlay;
-    public TextMeshProUGUI cardBackUnavailableDurationText;
+    [SerializeField] Image cardBackOverlay;
+    [SerializeField] TextMeshProUGUI cardBackUnavailableDurationText;
 
     [SerializeField] Zones.Type zone;
     Zones.Type movingToZone;
-    public Color[] typeColours;
+    [SerializeField] Color[] typeColours;
     [SerializeField] Material[] typeMats;
     [SerializeField] Material concealedMat;
-    public Color itemColour;
-    public Color backgroundColour, leaderBackgroundColour, itemBackgroundColour, enemyBackgroundColour;
+    [SerializeField] Color itemColour;
+    [SerializeField] Color backgroundColour, leaderBackgroundColour, itemBackgroundColour, enemyBackgroundColour;
 
-    public float animationDuration;
+    [SerializeField] float animationDuration;
 
-    public int attachments = 1;
+    [SerializeField] int attachments = 1;
     public List<CardObject> attachedCards = new List<CardObject>();
-    public bool equippedCard;
+    [SerializeField] bool equippedCard;
     [HideInInspector] public bool attachmentTargetMode;
 
     [Header("Effects")]
-    public Image effectOverlay;
-    public Sprite[] effectSprites;
-    public float effectAnimationDuration;
+    [SerializeField] Image effectOverlay;
+    [SerializeField] Sprite[] effectSprites;
+    [SerializeField] float effectAnimationDuration;
 
     [Header("Collider")]
-    public BoxCollider myCollider;
-    public Vector3 handColliderSize, baseColliderSize;
+    [SerializeField] BoxCollider myCollider;
+    [SerializeField] Vector3 handColliderSize, baseColliderSize;
 
     Vector3 previousPosition;
     Vector3 previousRotation;
@@ -65,7 +65,7 @@ public class CardObject : MonoBehaviour
     int armour;
 
     [Header("Modifiers")]
-    public int extraAttack;
+    [SerializeField] int extraAttack;
     [SerializeField] List<CardEffect> extraEffects = new List<CardEffect>();
     public int[] cardLootValues; //Treasure, People, Weapons
 

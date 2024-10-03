@@ -1,8 +1,11 @@
 TODo-
 Home Base, game starts here, from here you can open the game to multiplayer
 Battle start, start in zoomed out view then zoom in to initial card draw.
+Add a fog wall at the top of player zones so it can clear to let people know they can attack the location if no monsters present.
 
 Bugs
+*Dwarven carpenter repairing on equip not play, should make text clearer.
+*Lone wolf keeps it's item attached when returning to hand.
 *Recruit UI not updating with extra recruits at the start of round.
 -Monsters not moving correctly and monster in zone missing reference (Possibly due to either taunting and killing at the same time, or when the location is completely destroyed monsters not moving over properly)
 -Desync happening with monster generators, might just be a timing issue for getting the board state.
@@ -35,7 +38,7 @@ Bugs
 -Elven enchanter not working
 -Eager recruit not wiping if it is the last play of a round.
 
--(Maybe have another event for item upgrades?
+-(Maybe have another event for item upgrades?)
 
 *Sync board states, need to sync
 	-Recruitment Deck
