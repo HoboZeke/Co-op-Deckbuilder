@@ -21,7 +21,7 @@ public class CardObject : MonoBehaviour
     [SerializeField] Image shieldOverlay;
     [SerializeField] Image stunOverlay;
     public TextMeshProUGUI nameText;
-    public TextMeshProUGUI cardText;
+    [SerializeField] TextMeshProUGUI cardText;
     public TextMeshProUGUI attackText;
     [SerializeField] TextMeshProUGUI healthText;
     [SerializeField] TextMeshProUGUI shieldText;
@@ -920,6 +920,8 @@ public class CardObject : MonoBehaviour
                 }
             }
         }
+
+        Debug.Log(gameObject.name + " didn't trigger any response");
     }
 
     private void OnMouseExit()

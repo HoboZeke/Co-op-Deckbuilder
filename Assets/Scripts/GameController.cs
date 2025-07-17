@@ -886,4 +886,6 @@ public class BattleProfile
     public string name;
     public EnemyDecks.EnemyDeck deck;
     public int[] reservedEnemyID;
+    public int locationMonsters;
+    public int playerMonsters;
 }

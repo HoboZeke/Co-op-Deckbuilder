@@ -2,14 +2,12 @@ Treasure:
 You collect treasure cards which don't do anything but fill up your deck, however they count towards your meta-progress goals.
 
 Cards:
+		Freya lvl 3:
+			Gain attack equal to the current shield of the active player
 		Quick Study:
 			Starts with 0 atk, when it kills something permenantly get +1 atk.
 		Stubborn Elder:
 			has 5 Strength, it's strength value can never be altered.
-		Loud Boaster:
-			Always is face up, even when in your deck.
-		Lone Wolf:
-			At then end of your turn, if this is the only Person you have played return them to your hand.
 		Clumsy Jotun:
 			Gains double the Str bonus from items, but destroys the item when it attacks.
 		AshSteel Blade:

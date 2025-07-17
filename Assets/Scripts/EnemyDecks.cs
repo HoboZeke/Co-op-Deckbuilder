@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class EnemyDecks : MonoBehaviour
@@ -27,6 +25,9 @@ public class EnemyDecks : MonoBehaviour
 
     public void StartBattle(BattleProfile profile)
     {
+        playerSpawns = profile.playerMonsters;
+        locationSpawns = profile.locationMonsters + MutliplayerController.active.playerCount;
+
         if (!MutliplayerController.active.IsMultiplayerGame())
         {
             SpawnRandomBeastsToPlayer(playerSpawns, Player.active);

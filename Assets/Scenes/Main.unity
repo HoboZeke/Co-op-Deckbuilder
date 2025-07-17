@@ -8593,7 +8593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &147045932
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19090,6 +19090,8 @@ MonoBehaviour:
   - name: Kraken Isle
     deck: 0
     reservedEnemyID: 05000000
+    locationMonsters: 2
+    playerMonsters: 2
   recruitmentDeck: {fileID: 822229262}
   menuCanvas: {fileID: 963681182}
   mainWaves: {fileID: 1788939470}
@@ -29171,7 +29173,7 @@ MonoBehaviour:
     cardLoot: 000000000100000000000000
     gainCoinOnDefeat: 0
   - name: Small Pretty Bauble
-    art: {fileID: 21300000, guid: b0342c367174d4948aa859714c75eacf, type: 3}
+    art: {fileID: 21300000, guid: 605b9c5d76fcd9c468b11311c810302a, type: 3}
     attackValue: 0
     healthValue: 0
     armourValue: 0
@@ -29190,7 +29192,7 @@ MonoBehaviour:
     cardLoot: 010000000000000000000000
     gainCoinOnDefeat: 0
   - name: Small Heirloom
-    art: {fileID: 21300000, guid: b58dba4eb325aca44bb09fe4c052c843, type: 3}
+    art: {fileID: 21300000, guid: f8e704b45d31b6241a1046571b90fb8f, type: 3}
     attackValue: 0
     healthValue: 0
     armourValue: 0
@@ -29285,7 +29287,7 @@ MonoBehaviour:
     cardLoot: 000000000000000001000000
     gainCoinOnDefeat: 0
   - name: Beacon of Alfheim
-    art: {fileID: 21300000, guid: 3798216d978c77d438d80c352d9ff7e2, type: 3}
+    art: {fileID: 21300000, guid: ae7b0e4236a81dd439cdca0686d6979f, type: 3}
     attackValue: 0
     healthValue: 0
     armourValue: 0
@@ -29326,7 +29328,7 @@ MonoBehaviour:
     cardLoot: 000000000000000001000000
     gainCoinOnDefeat: 0
   - name: Thundercaller
-    art: {fileID: 21300000, guid: ebf377ab4296d6d4d81e34733e3040c2, type: 3}
+    art: {fileID: 21300000, guid: 25ba0124a5f89aa468bb4907da3a870a, type: 3}
     attackValue: 0
     healthValue: 0
     armourValue: 0
@@ -29406,7 +29408,7 @@ MonoBehaviour:
     cardLoot: 000000000100000000000000
     gainCoinOnDefeat: 0
   - name: Elven Enchanter
-    art: {fileID: 21300000, guid: 5699427e6f12cb64da6ecc31b1dfe2eb, type: 3}
+    art: {fileID: 21300000, guid: a31ceb4b60f10d545a1ea331d6760fa5, type: 3}
     attackValue: 1
     healthValue: 0
     armourValue: 0
@@ -29548,7 +29550,7 @@ MonoBehaviour:
     cardLoot: 000000000100000000000000
     gainCoinOnDefeat: 0
   - name: Obnoxious Boaster
-    art: {fileID: 21300000, guid: cb3e5b3fbd656e348bac38c484a3cb9f, type: 3}
+    art: {fileID: 21300000, guid: f30b00220e001864b97920c925363d12, type: 3}
     attackValue: 1
     healthValue: 0
     armourValue: 0
@@ -38578,7 +38580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectTag: 0
   targetTriggerType: 1
-  abilityString: Recruit
+  abilityString: Recruit 1
   keywords: 02000000
   strength: 1
 --- !u!1 &686667546
@@ -116302,7 +116304,7 @@ MonoBehaviour:
     cardLoot: 
     gainCoinOnDefeat: 0
   - name: Mountain Giant
-    art: {fileID: 21300000, guid: e0bdd8df9e6f57847af49dff71ee9153, type: 3}
+    art: {fileID: 21300000, guid: e0fb5d275856a73448a56bad4e25a4c0, type: 3}
     attackValue: 1
     healthValue: 10
     armourValue: 0

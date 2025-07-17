@@ -1240,7 +1240,6 @@ public class LocationEventManager : MonoBehaviour
         CardObject winnerCard = winner.GetComponent<CardObject>();
 
         winnerCard.AddEffectToCard(loserCard.myCard.cardEffects);
-        winnerCard.cardText.text += "\n" + loserCard.cardText.text;
         winnerCard.cardLootValues[0] += loserCard.cardLootValues[0];
         winnerCard.cardLootValues[1] += loserCard.cardLootValues[1];
         winnerCard.cardLootValues[2] += loserCard.cardLootValues[2];
@@ -1277,7 +1276,6 @@ public class LocationEventManager : MonoBehaviour
 
 
         winner.AddEffectToCard(loser.myCard.cardEffects);
-        winner.cardText.text += loser.cardText.text;
         winner.cardLootValues[0] += loser.cardLootValues[0];
         winner.cardLootValues[1] += loser.cardLootValues[1];
         winner.cardLootValues[2] += loser.cardLootValues[2];

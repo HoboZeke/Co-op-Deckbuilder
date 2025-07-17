@@ -4,6 +4,8 @@ Battle start, start in zoomed out view then zoom in to initial card draw.
 Add a fog wall at the top of player zones so it can clear to let people know they can attack the location if no monsters present.
 
 Bugs
+-Card merge event arrows are the wrong way around and they should be a different colour.
+-Merge cards are getting twice the description.
 *Dwarven carpenter repairing on equip not play, should make text clearer.
 *Lone wolf keeps it's item attached when returning to hand.
 *Recruit UI not updating with extra recruits at the start of round.

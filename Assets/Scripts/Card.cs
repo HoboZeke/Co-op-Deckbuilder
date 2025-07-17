@@ -14,6 +14,7 @@ public class Card
     public enum Tag { Enemy, Person, Item, Leader, Ability };
     public Tag tag;
 
+    //Physical cards are connected to Sol (Sun) and Magical are connect to Mani (Moon)
     public enum CardType { Physical, Magical, Monster, Ability, Treasure };
     public CardType cardType;
 
